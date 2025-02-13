@@ -1,42 +1,29 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { FcGoogle } from 'react-icons/fc';
 import { FaMicrosoft } from 'react-icons/fa';
 import Image from 'next/image';
 
-export default function Login() {
+export default function Loginin() {
   return <LoginForm />;
 }
 
 function LoginForm() {
   const [email, setEmail] = useState('');
-  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
-  const [isVerified, setIsVerified] = useState(false);
-
-  const handleCaptchaChange = (token: string | null) => {
-    if (token) {
-      setIsVerified(true);
-    } else {
-      setIsVerified(false);
-    }
-  };
+  const recaptchaRef = React.useRef<ReCAPTCHA>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const token = recaptchaRef.current?.getValue();
     if (!token) {
-      alert('Please complete the reCAPTCHA');
+      alert('Please complete the reCAPTHA');
       return;
     }
 
     console.log('reCAPTCHA Token:', token);
-
-    // Handle form submission
-    recaptchaRef.current?.reset(); // Reset reCAPTCHA after submission
-    setIsVerified(false);
   };
 
   return (
@@ -54,7 +41,7 @@ function LoginForm() {
           </div>
         </div>
 
-        {/* Welcome Message */}
+        {/* Create account */}
         <h2
           className="mb-6 text-center"
           style={{
@@ -75,8 +62,8 @@ function LoginForm() {
               style={{
                 fontSize: '14px',
                 fontWeight: 'regular',
-                color: 'var(--secondary-color)',
-                backgroundColor: 'var(--background)',
+                color: '#096809',
+                backgroundColor: '#f3f7fb',
               }}
             >
               Email address
@@ -90,33 +77,31 @@ function LoginForm() {
               className="h-[64px] w-[320px] rounded-md border px-4 py-3 text-gray-900 shadow-sm focus:border-green-500 focus:ring-1 focus:ring-green-500"
               style={{
                 borderColor: 'var(--primary-color)',
-                backgroundColor: 'var(--background)',
+                backgroundColor: '#f3f7fb',
               }}
             />
           </div>
 
-          {/* reCAPTCHA */}
+          {/* Add reCAPTCHA before the Continue button */}
           <div
             className="mt-[13px] flex h-[82px] w-[320px] justify-center overflow-hidden rounded-md"
-            style={{ backgroundColor: 'transparent' }}
+            style={{ backgroundColor: 'transparent' }} // Set background to transparent
           >
             <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
               ref={recaptchaRef}
-              onChange={handleCaptchaChange}
-              onExpired={() => setIsVerified(false)}
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
             />
           </div>
 
           {/* Continue Button */}
-          <button type="submit" className="button" disabled={!isVerified}>
+          <button type="submit" className="button">
             Continue
           </button>
 
           {/* Sign Up Link */}
           <p className="text-center text-sm text-gray-600">
-            Don&apos;t have an account?{' '}
-            <a href="/signup" className="link link-secondary hover:underline">
+            Don&appos;t have an account?{' '}
+            <a href="/login" className="link link-secondary hover:underline">
               Sign up
             </a>
           </p>

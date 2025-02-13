@@ -7,10 +7,10 @@ import { FaMicrosoft } from 'react-icons/fa';
 import Image from 'next/image';
 
 export default function Signup() {
-  return <SignUpForm />;
+  return <SignupForm />;
 }
 
-function SignUpForm() {
+function SignupForm() {
   const [email, setEmail] = useState('');
   const recaptchaRef = React.useRef<ReCAPTCHA>(null);
 
@@ -62,8 +62,8 @@ function SignUpForm() {
               style={{
                 fontSize: '14px',
                 fontWeight: 'regular',
-                color: 'var(--secondary-color)',
-                backgroundColor: 'var(--background)',
+                color: '#096809',
+                backgroundColor: '#f3f7fb',
               }}
             >
               Email address
@@ -77,7 +77,7 @@ function SignUpForm() {
               className="h-[64px] w-[320px] rounded-md border px-4 py-3 text-gray-900 shadow-sm focus:border-green-500 focus:ring-1 focus:ring-green-500"
               style={{
                 borderColor: 'var(--primary-color)',
-                backgroundColor: 'var(--background)',
+                backgroundColor: '#f3f7fb',
               }}
             />
           </div>
@@ -89,7 +89,7 @@ function SignUpForm() {
           >
             <ReCAPTCHA
               ref={recaptchaRef}
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
             />
           </div>
 
