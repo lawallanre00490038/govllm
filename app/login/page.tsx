@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { FcGoogle } from 'react-icons/fc';
 import { FaMicrosoft } from 'react-icons/fa';
@@ -12,7 +12,7 @@ export default function Loginin() {
 
 function LoginForm() {
   const [email, setEmail] = useState('');
-  const recaptchaRef = React.useRef<ReCAPTCHA>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ function LoginForm() {
           </div>
         </div>
 
-        {/* Create account */}
+        {/* Login */}
         <h2
           className="mb-6 text-center"
           style={{
@@ -101,8 +101,8 @@ function LoginForm() {
 
           {/* Sign Up Link */}
           <p className="text-center text-sm text-gray-600">
-            Don&appos;t have an account?{' '}
-            <a href="/login" className="link link-secondary hover:underline">
+            Don&apos;t have an account?{' '}
+            <a href="/signup" className="link link-secondary hover:underline">
               Sign up
             </a>
           </p>

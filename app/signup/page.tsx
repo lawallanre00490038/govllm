@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { FcGoogle } from 'react-icons/fc';
 import { FaMicrosoft } from 'react-icons/fa';
@@ -12,7 +12,7 @@ export default function Signup() {
 
 function SignupForm() {
   const [email, setEmail] = useState('');
-  const recaptchaRef = React.useRef<ReCAPTCHA>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,6 +87,7 @@ function SignupForm() {
             className="mt-[13px] flex h-[82px] w-[320px] justify-center overflow-hidden rounded-md"
             style={{ backgroundColor: 'transparent' }} // Set background to transparent
           >
+            {/* @ts-expect-error: Ignoring type error for ReCAPTCHA component */}
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
