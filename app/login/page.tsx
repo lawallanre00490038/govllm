@@ -87,6 +87,7 @@ function LoginForm() {
             className="mt-[13px] flex h-[82px] w-[320px] justify-center overflow-hidden rounded-md"
             style={{ backgroundColor: 'transparent' }} // Set background to transparent
           >
+            {/* @ts-expect-error: Ignoring type error for ReCAPTCHA component */}
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
