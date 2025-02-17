@@ -1,0 +1,27 @@
+/* app/welcome/WelcomePage.css */
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f8ff; /* Light background color */
+  text-align: center;
+}
+
+.logo-container {
+  margin-bottom: 21px;
+}
+
+.text-center {
+  margin-bottom: 6px;
+  font-size: 0.875rem; /* Equivalent to text-sm */
+  color: #4b5563; /* Equivalent to text-gray-600 */
+}
+
+.button-container {
+  margin-top: 27px;
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
