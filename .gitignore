@@ -13,6 +13,8 @@
 # testing
 /coverage
 
+MYREADME.md
+
 # next.js
 /.next/
 /out/
