@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import './WelcomePage.css';
+import './welcomePage.css';
 
 const WelcomePage: React.FC = () => {
   return (
