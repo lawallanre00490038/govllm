@@ -1,5 +1,5 @@
-import { NextRequest } from 'next/server';
 import axios from 'axios';
+import { NextRequest } from 'next/server';
 
 export async function POST(req: NextRequest) {
   const { token } = await req.json();
