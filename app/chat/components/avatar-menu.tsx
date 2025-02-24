@@ -26,7 +26,7 @@ export function AvatarMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="mt-4 flex h-[62px] w-full items-center gap-2.5 rounded-full border border-input bg-white px-2.5 shadow">
+        <div className="mt-4 flex h-[62px] w-full items-center gap-2.5 rounded-full border border-input bg-white px-2.5 shadow">
           <Image
             src="/pretty-lady.jpeg"
             alt="profile"
@@ -39,7 +39,7 @@ export function AvatarMenu() {
           <Button variant={'outline'} className="ml-auto h-9 w-9">
             <LogOut />
           </Button>
-        </button>
+        </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-[275px]" align="start">
         <DropdownMenuItem>

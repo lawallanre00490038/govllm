@@ -1,13 +1,20 @@
 import Image from 'next/image';
 
-export const Logo = () => {
+type Props = {
+  className?: string;
+  height?: number;
+  width?: number;
+};
+
+export const Logo = ({ className, height, width }: Props) => {
   return (
     <Image
       src="/full-logo.svg"
       alt="Logo"
-      width={136.53}
-      height={30.99}
+      width={width || 137}
+      height={height || 31}
       priority
+      className={className}
     />
   );
 };
