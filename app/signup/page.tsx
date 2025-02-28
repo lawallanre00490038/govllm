@@ -32,7 +32,7 @@ function SignupForm() {
         <div className="mb-6 text-center">
           <div className="inline-block rounded-full px-5 py-2">
             <Image
-              src="/full-logo.png"
+              src="/logo.png"
               alt="Logo"
               width={136.53}
               height={30.99}

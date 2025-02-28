@@ -1,9 +1,13 @@
-export default function Home() {
+import React from 'react';
+// import MobileNav from './components/mobile-nav'
+import HeroComponent from './components/Hero';
+
+const HomePage = () => {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <main>
-        GOVLLMINER - A simple tool to mine the latest government data. 🚀
-      </main>
+    <div className="mx-auto flex flex-col items-center justify-center overflow-hidden bg-white p-4 md:w-[1200px]">
+      <HeroComponent />
     </div>
   );
-}
+};
+
+export default HomePage;

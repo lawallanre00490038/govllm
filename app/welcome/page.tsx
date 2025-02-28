@@ -10,7 +10,7 @@ const WelcomePage: React.FC = () => {
     <div className="welcome-container">
       <div className="mb-[21px] text-center">
         <Image
-          src="/full-logo.png"
+          src="/logo.png"
           alt="Logo"
           width={198.3}
           height={45.01}
