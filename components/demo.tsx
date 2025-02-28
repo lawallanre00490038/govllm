@@ -44,7 +44,7 @@ const Demo = () => {
   ];
 
   return (
-    <section className="px-6 pb-16 pt-[960px] text-center">
+    <section className="px-6 text-center md:mt-[112px]">
       <h2 className="mb-6 text-2xl font-bold text-[#160647]">
         Why BizLLMiner?
       </h2>

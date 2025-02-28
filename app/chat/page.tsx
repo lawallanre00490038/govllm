@@ -38,7 +38,7 @@ export default function Page() {
     <div>
       <Sidebar />
       <main className="relative ml-[348px] h-full px-16 pt-16">
-        <div className="overflow-y-auto pb-20">
+        <div className="overflow-y-auto pb-[200px]">
           <div className="flex justify-center">
             <Logo className="h-[66px] w-[300px]" width={300} height={66} />
           </div>

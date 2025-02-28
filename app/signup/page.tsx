@@ -81,24 +81,21 @@ function SignupForm() {
               }}
             />
           </div>
-
           {/* Add reCAPTCHA before the Continue button */}
-          <div
+          {/* <div
             className="mt-[13px] flex h-[82px] w-[320px] justify-center overflow-hidden rounded-md"
             style={{ backgroundColor: 'transparent' }} // Set background to transparent
-          >
-            {/* @ts-expect-error: Ignoring type error for ReCAPTCHA component */}
-            <ReCAPTCHA
+          > */}
+          @ts-expect-error: Ignoring type error for ReCAPTCHA component
+          {/* <ReCAPTCHA
               ref={recaptchaRef}
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
             />
-          </div>
-
+          </div> */}
           {/* Continue Button */}
           <button type="submit" className="button">
             Continue
           </button>
-
           {/* Sign Up Link */}
           <p className="text-center text-sm text-gray-600">
             Already have an account?{' '}
@@ -106,7 +103,6 @@ function SignupForm() {
               Sign in
             </a>
           </p>
-
           {/* Divider */}
           <div className="relative mt-[14px] flex items-center justify-center">
             <div className="w-full border-t border-gray-300"></div>
@@ -114,13 +110,11 @@ function SignupForm() {
               OR
             </span>
           </div>
-
           {/* Social Login Buttons */}
           <button className="social-button mb-[8px]">
             <FcGoogle className="mr-2 h-5 w-5 text-red-500" />
             Continue with Google
           </button>
-
           <button className="social-button">
             <FaMicrosoft className="mr-2 h-5 w-5 text-blue-600" />
             Continue with Microsoft Account

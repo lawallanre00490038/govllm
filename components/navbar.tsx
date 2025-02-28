@@ -98,7 +98,7 @@ const Navbar = () => {
           ))}
 
           {/* Sign Up Button */}
-          <Link href="/signup">
+          <Link href="/welcome">
             <button className="h-[47px] w-[142px] rounded-[5px] bg-[#C4FAC4] px-4 py-2 text-[#096809] transition hover:bg-green-400">
               Sign Up
             </button>
@@ -116,6 +116,7 @@ const Navbar = () => {
           {/* Close Button */}
           <button
             className="absolute right-5 top-5 flex h-6 w-6 items-center justify-center rounded-full bg-[#F5F8FA] text-[#AEB0C1] transition"
+            title="Close Menu"
             onClick={() => setMenuOpen(false)}
           >
             <X size={20} />

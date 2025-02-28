@@ -60,7 +60,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
   }, [message, maxHeight, minHeight, adjustHeight]);
 
   return (
-    <div className="mx-auto max-w-3xl rounded-[30px] border bg-white">
+    <div className="mx-auto mt-[100px] max-w-3xl rounded-[30px] border bg-white">
       <form
         onSubmit={handleSubmit}
         className="relative mx-auto flex w-full items-end gap-2 pt-5"
