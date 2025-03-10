@@ -12,12 +12,12 @@ const HeroComponent = () => {
           </span>
         </button>
 
-        <h1 className="text-[12px] font-bold leading-tight text-[#000000] md:text-[48px]">
+        <h1 className="text-[18px] font-bold leading-tight text-[#000000] md:text-[48px]">
           BizLLMiner: Make informed decisions with AI-Powered Analytics from you
           data.
         </h1>
 
-        <p className="text-[4px] text-black/50 md:text-[16px] lg:max-w-[600px]">
+        <p className="text-[18px] text-black/50 md:text-[16px] lg:max-w-[600px]">
           Harnesses the power of artificial intelligence to transform your
           business data into actionable insights, propelling you to new heights
           of success.
@@ -42,7 +42,7 @@ const HeroComponent = () => {
           width={226}
           height={84}
           alt="shape"
-          className="contain absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform shadow-xl hover:cursor-pointer hover:shadow-2xl"
+          className="contain absolute left-1/2 top-1/2 h-[40px] w-[150px] -translate-x-1/2 -translate-y-1/2 transform shadow-xl hover:cursor-pointer hover:shadow-2xl md:h-[84px] md:w-[226px]"
         />
       </div>
     </div>
